@@ -10,7 +10,7 @@ body {
 }
 header {
     background-color: #EAC926;
-    padding: 5px;
+    padding: 10px 15px;
 }
 p {
     font-family: 'Roboto', sans-serif;
@@ -20,23 +20,53 @@ p {
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    width: 100%;
 }
-.logo img {
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
     width: 50%;
+    max-width: 120px;
 }
 .busqueda {
-    margin: 20px;
+    margin: 10px;
+    width: 50%;
+    position: relative;
 }
-.busqueda input {
-    width: 90%;
-    height: 30px;
-    font-size: 16px;
-    text-indent: 30px;
-    font-family: 'Roboto', sans-serif;
+.busqueda::after {
+    content: '';
+    background-color: #fff;
+    height: 100%;
+    position: absolute;
+    width: 40px;
+    right: 0px;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid #8080805c;
 }
 .busqueda i {
+    color: #808080ad;
+    position: absolute;
+    right: 10px;
+    top: 10px;
     margin-left: -245px;
+    z-index: 10;
+    cursor: pointer;
 }
+.busqueda input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border: 0;
+}
+
 .tarjetas_header {
     text-align: center;
     padding: 10px;
@@ -44,6 +74,10 @@ h2 {
 .tarjetas_header p {
     display: inline;
     margin: 0px 5px;
+}
+.site-bar,
+.login-bar {
+    display: none;
 }
 nav ul {
     padding: 0;
@@ -72,21 +106,42 @@ nav ul li a {
     margin: auto;
     width: 90%;
 }
+.recomendaciones {
+    margin: 20px 0px;
+}
 .producto {
     margin-top: 10px;
-
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
 }
 .producto i {
     color: #39b54a;
     display: block;
 }
 .info-producto {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
     border-top: 1px solid #ebebeb;
-    padding: 15px;
+    padding: 5px;
     background-color: #fff;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+}
+.info-producto i {
+    display: block;
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    border-radius: 50%;
+    border: 1px solid #39b54a;
+    padding: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+}
+.info-precio {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 .precio {
     font-size: 18px;
@@ -99,7 +154,6 @@ nav ul li a {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0px 0px 20px 0px;
-    visibility: hidden;
 }
 footer {
     text-align: center;
@@ -119,32 +173,61 @@ section.icono_footer {
     color: #1259c3;
     font-size: 2em;
 }
-.site-bar,
-.login-bar {
-    display: none;
-}
-@media (min-width: 361px) {
-    .descripcion {
-        visibility: visible;
-    }
+
+/*TABLET*/
+@media (min-width: 425px) {
     .producto {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
     }
-    .site-bar,
-    .login-bar {
-    display: block;
+    .recomendaciones,
+    .ofertas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .ofertas h2 {
+        flex-grow: 1;
+    }
+    .logo {
+        max-width: 150px;
+    }
+}
+/*FIN TABLET */
+
+/*DESKTOP*/
+@media (min-width: 769px) {
+    header {
+        padding: 10px 50px;
+    }
+    .top-bar {
+        justify-content: space-between;
     }
     .burger-menu {
         display: none;
     }
-}
-
-@media (min-width: 769px) {
-    .descripcion {
-        visibility: visible;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0px 0px;
     }
     .site-bar,
     .login-bar {
-    display: block;
+        display: flex;
+        gap: 1rem;
+    }
+    .descripcion {
+        visibility: visible;
+    }
+
+    .busqueda {
+        width: 500px;
+        border-radius: 3px;
+    }
+    .busqueda input {
+        border: 0;
+    }
+    .producto {
+        width: 23%;
     }
 }
