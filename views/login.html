@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/styles.css">
+        <title>Iniciar Sesión</title>
+    </head>
+<body>
+    <header>
+        <div class="top-bar">
+            <section class="logo">
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
+            </section>
+            <section class="busqueda">
+                <input type="text" placeholder="Buscar productos, marcas y más...">
+                <i class="fas fa-search"></i>
+            </section>
+            <section class="tarjetas_header">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p>Comprá en cuotas y sin tarjeta de crédito</p>
+            </section>
+        </div>
+
+        <nav>
+            <ul class="site-bar">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="login-bar">
+                <li><a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+                </div>
+        </nav>
+    </header>
+    <main class="contenedor-formularios">
+        
+        <section class="form-login">
+            <h1>Iniciar Sesión</h1>
+            <form action="/" class="login">
+                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario">
+                <input type="password" name="password" placeholder="Contraseña">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

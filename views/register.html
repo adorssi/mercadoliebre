@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/styles.css">
+        <title>Registrarse</title>
+    </head>
+<body>
+    <header>
+        <div class="top-bar">
+            <section class="logo">
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
+            </section>
+            <section class="busqueda">
+                <input type="text" placeholder="Buscar productos, marcas y más...">
+                <i class="fas fa-search"></i>
+            </section>
+            <section class="tarjetas_header">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p>Comprá en cuotas y sin tarjeta de crédito</p>
+            </section>
+        </div>
+
+        <nav>
+            <ul class="site-bar">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="login-bar">
+                <li><a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+                </div>
+        </nav>
+    </header>
+    <main class="contenedor-formularios">
+        <section class="formulario-registro">
+            <h1>Crea una cuenta</h1>
+            <form class="registro" action="/">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+
+                <label>Fecha de nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+
+                <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+                
+                <label>Perfil: 
+                <label><input type="radio" name="tipoPerfil" value="vendedor">Vendedor</label>
+                <label><input type="radio" name="tipoPerfil" value="comprador">Comprador</label>
+                </label>
+                
+                <label for="categorias"> Categorias<br>
+                    <label><input type="checkbox" name="categorias" value="electro">Electro</label>
+                    <label><input type="checkbox" name="categorias" value="moda">Moda</label>
+                    <label><input type="checkbox" name="categorias" value="hogar">Hogar</label>
+                    <label><input type="checkbox" name="categorias" value="jugueteria">Juguetería</label>
+                    <label><input type="checkbox" name="categorias" value="vidaSana">Vida Sana</label>
+                </label>
+                
+                <label>Foto de perfil: </label>
+                <input type="file" name="fotoUsuario" accept=".jpg">
+                
+
+                <input type="password" name="password" placeholder="Contraseña">
+
+                <input type="password" name="confirmarPassword" placeholder="Confirmar Contraseña">
+
+                <button type="submit" value="enviar">Enviar</button>
+                <button type="reset" value="borrar">Borrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
