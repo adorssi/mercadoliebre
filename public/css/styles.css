@@ -122,7 +122,7 @@ nav ul li a {
     box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
 }
 .producto:hover .descripcion {
-    display: block;
+   visibility: visible;
 }
 .producto:hover i {
     transform: rotate(-90deg);
@@ -163,7 +163,7 @@ nav ul li a {
     color: #39b54a;
 }
 .descripcion {
-    display: none;
+    visibility: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0px 0px 20px 0px;
@@ -292,9 +292,9 @@ input[type="file"] {
         display: flex;
         gap: 1rem;
     }
-    .descripcion {
+    /*.descripcion {
         visibility: visible;
-    }
+    }*/
 
     .busqueda {
         width: 500px;
