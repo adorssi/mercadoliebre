@@ -198,48 +198,98 @@ section.icono_footer {
    display: flex;
    align-items: center;
    justify-content: center;
-   background: linear-gradient(45deg, #000000, #00000091), url(/images/mercado_libre_especial.jpg);
+   background: linear-gradient(45deg, #00d9faab, #ff00e285);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
    min-height: 100vh;
    padding: 30px 0;
+   position: relative;
 }
-section.formulario-registro, section.form-login {
-    width: 350px;
+
+input[type=text],
+input[type=password],
+input[type=date] {
+    border: 1px solid transparent;
 }
+
+input[type=text]::placeholder,
+input[type=password]::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #cdcdcd;
+}
+.login input[type=text]::placeholder,
+.login input[type=password]::placeholder {
+    color: #c6c6c6;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input:focus::placeholder {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 10px;
+}
+
+
 
 section.formulario-registro h1, section.form-login h1 {
     text-align: center;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 .registro,
 .login {
-    margin: 30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: 18px;
     color: #3e3e3e;
     font-family: -webkit-pictograph;
+    background-color: #000;
+    border-radius: 15px 0 0 15px;
+}
+.login {
+    background-color: #ffffff3d;
+    border-radius: 15px;
 }
 .registro label {
     display: block;
-    font-weight: 600;
+    font-weight: 100;
     color: #fff;
+}
+.login h4, a {
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
 }
 .registro input,
 .login input {
-    padding: 7px;
-    border: none;
+    padding: 15px;
+    border-radius: 5px;
     box-shadow: 2px 2px 10px #00000024;
+    position: relative;
+    background-color: transparent;
+    border-bottom: 1px solid #cdcdcd;
+}
+.login input {
+    background-color: white;
 }
 .registro button,
 .login button {
-    padding: 8px;
+    padding: 15px;
     background-color: #155cf8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
     border: 0;
     color: white;
 }
@@ -247,9 +297,20 @@ section.formulario-registro h1, section.form-login h1 {
     background-color: #0022AA;
 }
 
+button[type=reset] {
+    background-color: #e82b2bf0;
+}
+
 input[type="file"] {
     color: white;
 }
+.fondo-login {
+    display: none;
+}
+.form-login {
+    position: absolute;
+}
+
 /*TABLET*/
 @media (min-width: 425px) {
     .producto {
@@ -305,5 +366,31 @@ input[type="file"] {
     }
     .producto {
         width: 23%;
+    }
+    .formulario-registro {
+        width: 100%;
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-form-register {
+        width: 100%;
+        background-color: #ffdb15;
+        background-image: url(/images/ml-banner-v.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 0 15px 15px 0;
+    }
+    .fondo-login {
+        display: block;
+        width: 100%;
+        opacity: 0.15;
+    }
+    .login {
+        width: 400px;
+    }
+    .login img {
+        width: 60%;
+        align-self: center;
     }
 }
