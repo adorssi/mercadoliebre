@@ -236,7 +236,9 @@ input:focus::placeholder {
     font-size: 10px;
 }
 
-
+.formulario-registro {
+    width: 90%;
+}
 
 section.formulario-registro h1, section.form-login h1 {
     text-align: center;
@@ -254,7 +256,7 @@ section.formulario-registro h1, section.form-login h1 {
     color: #3e3e3e;
     font-family: -webkit-pictograph;
     background-color: #000;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px;
 }
 .login {
     background-color: #ffffff3d;
@@ -309,6 +311,11 @@ input[type="file"] {
 }
 .form-login {
     position: absolute;
+    width: 90%;
+}
+.form-login img {
+    width: 50%;
+    align-self: center;
 }
 
 /*TABLET*/
@@ -392,5 +399,11 @@ input[type="file"] {
     .login img {
         width: 60%;
         align-self: center;
+    }
+    .registro {
+        border-radius: 15px 0 0 15px;
+    }
+    .form-login {
+        width: auto;
     }
 }
