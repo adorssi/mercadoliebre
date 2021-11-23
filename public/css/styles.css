@@ -35,7 +35,6 @@ h2 {
 }
 .busqueda {
     margin: 10px;
-    width: 50%;
     position: relative;
 }
 .busqueda::after {
@@ -45,14 +44,24 @@ h2 {
     position: absolute;
     width: 40px;
     right: 0px;
+    top: 0;
     border-radius: 0 5px 5px 0;
     border-left: 1px solid #8080805c;
+}
+.busqueda button {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    border: none;
 }
 .busqueda i {
     color: #808080ad;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 15px;
+    top: 15px;
     margin-left: -245px;
     z-index: 10;
     cursor: pointer;
@@ -169,7 +178,6 @@ nav ul li a {
     margin: 0px 0px 20px 0px;
 }
 footer {
-    display: flex;
     flex-wrap: wrap;
     padding: 10px 20px;
 }
@@ -178,7 +186,7 @@ footer h4, p {
     font-size: 18px;
 }
 
-section.icono_footer {
+div.icono_footer {
     margin: 20px 0px;
     text-align: center;
     flex: 33.3%;
@@ -362,11 +370,7 @@ input[type="file"] {
         display: flex;
         gap: 1rem;
     }
-    /*.descripcion {
-        visibility: visible;
-    }*/
-
-    .busqueda {
+        .busqueda {
         width: 500px;
         border-radius: 3px;
     }
@@ -407,5 +411,8 @@ input[type="file"] {
     }
     .form-login {
         width: auto;
+    }
+    footer {
+        display: flex;
     }
 }

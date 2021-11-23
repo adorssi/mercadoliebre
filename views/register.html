@@ -17,9 +17,13 @@
             <section class="logo">
                 <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
             </section>
-            <section class="busqueda">
-                <input type="text" placeholder="Buscar productos, marcas y más...">
-                <i class="fas fa-search"></i>
+            <section>
+                <form class="busqueda">
+                    <input type="text" placeholder="Buscar productos, marcas y más...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </section>
             <section class="tarjetas_header">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -49,14 +53,14 @@
             
             <form class="registro" action="/">
                 <h1>Crea una cuenta</h1>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
 
                 <label>Fecha de nacimiento</label>
-                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required val>
 
-                <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+                <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
                 
                 <label>Perfil: 
                 <label><input type="radio" name="tipoPerfil" value="vendedor">Vendedor</label>
@@ -75,9 +79,9 @@
                 <input type="file" name="fotoUsuario" accept=".jpg">
                 
 
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="password" name="password" placeholder="Contraseña" required>
 
-                <input type="password" name="confirmarPassword" placeholder="Confirmar Contraseña">
+                <input type="password" name="confirmarPassword" placeholder="Confirmar Contraseña" required>
 
                 <button type="submit" value="enviar">Enviar</button>
                 <button type="reset" value="borrar">Borrar</button>

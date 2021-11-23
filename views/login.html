@@ -17,9 +17,13 @@
             <section class="logo">
                 <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
             </section>
-            <section class="busqueda">
-                <input type="text" placeholder="Buscar productos, marcas y más...">
-                <i class="fas fa-search"></i>
+            <section>
+                <form class="busqueda">
+                    <input type="text" placeholder="Buscar productos, marcas y más...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </section>
             <section class="tarjetas_header">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -50,8 +54,8 @@
             <form action="/" class="login">
                 <img src="/images/logo-mercado-liebre.svg" alt="Logo MercadoLiebre">
                 <h4>Iniciar Sesión</h4>
-                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario">
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
                 <button type="submit">Enviar</button>
                 <a href="#">Olvide mi contraseña</a>
             </form>
